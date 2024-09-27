@@ -2,4 +2,4 @@ from fastapi import FastAPI
 app = FastAPI()
 @app.get("/")
 def example():
-    return{'message':'hello world'}
+    return{'message':'welcome to render deployment'}
