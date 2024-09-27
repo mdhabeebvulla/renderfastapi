@@ -10,6 +10,6 @@ X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=
 lr.fit(X_train,y_train)
 app = FastAPI()
 @app.get("/")
-def example(sl,sw,pl,pw):
+def example(sl: float, sw: float, pl: float, pw: float):
     result = lr.predict([[sl,sw,pl,pw]])
     return{'message':int(result[0])}
